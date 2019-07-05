@@ -69,7 +69,7 @@ class Webpacker::Compiler
       if status.success?
         logger.info "Compiled all packs in #{config.public_output_path}\n(errors):\n#{sterr}\n(stdout):\n#{stdout}"
       else
-        logger.error "Compilation failed (errors):\n#{sterr}\n(stdout):\n#{stdout}"
+        logger.error "Compilation failed; exit status #{status.exitstatus}\n(errors):\n#{sterr}\n(stdout):\n#{stdout}"
       end
 
       status.success?
